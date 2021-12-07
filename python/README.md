@@ -117,7 +117,7 @@ from lannerpsp import SystemLED
 當需要使用多個 class 時，需以逗點分隔每個 class，比如:
 
 ```python
-from lannerpsp import SystemLED, HWM, RFM
+from lannerpsp import SystemLED, HardwareMonitor, RadioFrequencyModule
 ```
 
 如果懶得一個個寫，可以一次 import 全部，比如:
@@ -133,15 +133,15 @@ class 需要實例化為物件才能使用，在實例化時可以傳入兩個�
 如果前面有按照我的方式[**一條指令裝到好**](https://github.com/jrchen982/lannerpsp#installation)，就不需要特別指定路徑，保持空白即可，比如:
 
 ```python
-from lannerpsp import HWM
-hwm = HWM()
+from lannerpsp import HardwareMonitor
+hwm = HardwareMonitor()
 ```
 
 如果是自行安裝，或是安裝後把 `.so` 檔移到別的路徑，則需分別指定路徑，比如:
 
 ```python
-from lannerpsp import HWM
-hwm = HWM(
+from lannerpsp import HardwareMonitor
+hwm = HardwareMonitor(
     lmb_io_path="/psp/bin/amd64/lib/liblmbio.so",
     lmb_api_path="/psp/bin/amd64/lib/liblmbapi.so",
 )
